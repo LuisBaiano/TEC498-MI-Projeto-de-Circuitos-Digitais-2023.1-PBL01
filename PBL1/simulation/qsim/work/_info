@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/PBL1/simulation/qsim
+vmain
+Z1 !s110 1679165668
+!i10b 1
+!s100 3iESb1SCGhGkejH9U4lQA3
+I>HBg^1Ah@PTPa<TOkl]5Z1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1679165665
+8pbl1.vo
+Fpbl1.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1679165668.000000
+!s107 pbl1.vo|
+!s90 -work|work|pbl1.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vmain_vlg_vec_tst
+R1
+!i10b 1
+!s100 W<JU9B6I29;Zo>_SI9@^W3
+I5AJMKoaL5NZ?3zidZY@5c1
+R2
+R0
+w1679165663
+8MP.vwf.vt
+FMP.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 MP.vwf.vt|
+!s90 -work|work|MP.vwf.vt|
+!i113 1
+R5
+R6

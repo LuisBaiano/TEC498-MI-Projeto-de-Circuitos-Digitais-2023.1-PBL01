@@ -1,0 +1,201 @@
+|main
+CH7 => CH7.IN3
+CH6 => CH6.IN3
+CH5 => CH5.IN3
+CH4 => CH4.IN3
+CH3 => CH3.IN3
+CH2 => CH2.IN1
+CH1 => CH1.IN1
+CH0 => CH0.IN1
+matriz_L[0] << matriz_linhas:comb_12.L0
+matriz_L[1] << matriz_linhas:comb_12.L1
+matriz_L[2] << matriz_linhas:comb_12.L2
+matriz_L[3] << matriz_linhas:comb_12.L3
+matriz_L[4] << matriz_linhas:comb_12.L4
+matriz_L[5] << matriz_linhas:comb_12.L5
+matriz_L[6] << matriz_linhas:comb_12.L6
+matriz_C[0] << matriz_colunas:comb_7.C1
+matriz_C[1] << matriz_colunas:comb_7.C2
+matriz_C[2] << matriz_colunas:comb_7.C3
+matriz_C[3] << matriz_colunas:comb_7.C4
+matriz_C[4] << matriz_colunas:comb_7.C5
+segA << display7seg:comb_9.sA
+segB << display7seg:comb_9.sB
+segC << display7seg:comb_9.sC
+segD << display7seg:comb_9.sD
+segE << display7seg:comb_9.sE
+segF << display7seg:comb_9.sF
+segG << display7seg:comb_9.sG
+dig1 << <VCC>
+dig2 << <VCC>
+dig3 << <VCC>
+dig4 << on_off.DB_MAX_OUTPUT_PORT_TYPE
+ponto << <VCC>
+
+
+|main|matriz_colunas:comb_7
+CH3 => C5.DATAIN
+CH4 => C4.DATAIN
+CH5 => C3.DATAIN
+CH6 => C2.DATAIN
+CH7 => C1.DATAIN
+C1 <= CH7.DB_MAX_OUTPUT_PORT_TYPE
+C2 <= CH6.DB_MAX_OUTPUT_PORT_TYPE
+C3 <= CH5.DB_MAX_OUTPUT_PORT_TYPE
+C4 <= CH4.DB_MAX_OUTPUT_PORT_TYPE
+C5 <= CH3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|verificador2de5:comb_8
+CH7 => CH7.IN1
+CH6 => CH6.IN1
+CH5 => CH5.IN1
+CH4 => CH4.IN1
+CH3 => CH3.IN1
+erro <= WideNand0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|verificador2de5:comb_8|somador:soma1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|main|verificador2de5:comb_8|somador:soma2
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|main|verificador2de5:comb_8|somador:soma3
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|main|verificador2de5:comb_8|somador:soma4
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => And1.IN1
+Cin => Xor1.IN1
+
+
+|main|display7seg:comb_9
+CH7 => WideAnd1.IN0
+CH7 => WideAnd2.IN0
+CH7 => WideAnd3.IN0
+CH7 => WideAnd6.IN0
+CH7 => WideAnd0.IN0
+CH7 => WideAnd4.IN0
+CH7 => WideAnd5.IN0
+CH7 => WideAnd7.IN0
+CH7 => WideAnd8.IN0
+CH6 => WideAnd0.IN1
+CH6 => WideAnd1.IN1
+CH6 => WideAnd4.IN1
+CH6 => WideAnd7.IN1
+CH6 => WideAnd2.IN1
+CH6 => WideAnd3.IN1
+CH6 => WideAnd5.IN1
+CH6 => WideAnd6.IN1
+CH6 => WideAnd8.IN1
+CH5 => WideAnd0.IN2
+CH5 => WideAnd2.IN2
+CH5 => WideAnd5.IN2
+CH5 => WideAnd1.IN2
+CH5 => WideAnd3.IN2
+CH5 => WideAnd4.IN2
+CH5 => WideAnd6.IN2
+CH5 => WideAnd7.IN2
+CH5 => WideAnd8.IN2
+CH4 => WideAnd3.IN3
+CH4 => WideAnd4.IN3
+CH4 => WideAnd5.IN3
+CH4 => WideAnd8.IN3
+CH4 => WideAnd0.IN3
+CH4 => WideAnd1.IN3
+CH4 => WideAnd2.IN3
+CH4 => WideAnd6.IN3
+CH4 => WideAnd7.IN3
+CH3 => WideAnd6.IN4
+CH3 => WideAnd7.IN4
+CH3 => WideAnd8.IN4
+CH3 => WideAnd0.IN4
+CH3 => WideAnd1.IN4
+CH3 => WideAnd2.IN4
+CH3 => WideAnd3.IN4
+CH3 => WideAnd4.IN4
+CH3 => WideAnd5.IN4
+valido => WideOr0.IN2
+valido => comb.IN1
+valido => WideOr1.IN3
+sA <= comb.DB_MAX_OUTPUT_PORT_TYPE
+sB <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+sC <= comb.DB_MAX_OUTPUT_PORT_TYPE
+sD <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+sE <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+sF <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+sG <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|matriz_linhas:comb_12
+CH2 => WideOr0.IN0
+CH2 => WideOr1.IN0
+CH2 => WideOr2.IN0
+CH2 => WideAnd0.IN0
+CH2 => WideOr3.IN0
+CH2 => WideOr4.IN0
+CH2 => WideOr5.IN0
+CH2 => WideOr6.IN0
+CH1 => WideOr0.IN1
+CH1 => WideOr3.IN1
+CH1 => WideOr4.IN1
+CH1 => WideAnd0.IN1
+CH1 => WideOr1.IN1
+CH1 => WideOr2.IN1
+CH1 => WideOr5.IN1
+CH1 => WideOr6.IN1
+CH0 => WideOr1.IN2
+CH0 => WideOr3.IN2
+CH0 => WideOr5.IN2
+CH0 => WideAnd0.IN2
+CH0 => WideOr0.IN2
+CH0 => WideOr2.IN2
+CH0 => WideOr4.IN2
+CH0 => WideOr6.IN2
+valido => WideOr0.IN3
+valido => WideOr1.IN3
+valido => WideOr2.IN3
+valido => WideOr3.IN3
+valido => WideOr4.IN3
+valido => WideOr5.IN3
+valido => WideOr6.IN3
+matriz_ou_display <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+L0 <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+L1 <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+L2 <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+L3 <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+L4 <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+L5 <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+L6 <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+

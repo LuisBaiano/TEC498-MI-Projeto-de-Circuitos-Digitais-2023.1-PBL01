@@ -1,0 +1,15 @@
+module matriz_colunas(CH3, CH4, CH5, CH6, CH7, Matriz_C);
+    
+	 input CH3, CH4, CH5, CH6, CH7;
+	 output [4:0] Matriz_C;
+	 
+	 //Como não há necessidade de codificação entre as chaves e as colunas da matriz de leds,
+	 //podemos relacionar as chaves, diretamente às pinagens das colunas.
+
+    assign Matriz_C[0] = CH7;
+    assign Matriz_C[1] = CH6;
+    assign Matriz_C[2] = CH5;
+    assign Matriz_C[3] = CH4;
+    assign Matriz_C[4] = CH3;
+
+endmodule

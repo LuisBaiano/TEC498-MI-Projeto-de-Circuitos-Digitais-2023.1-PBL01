@@ -1,0 +1,56 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/aluno/Downloads/PBL1/simulation/qsim
+vmain
+Z1 !s110 1678820470
+!i10b 1
+!s100 Gl>aRYe3FNWO5f51i<Fg?0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Il2VZ2:7Gfj4USnal=5>Xn3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1678820468
+8pbl1.vo
+Fpbl1.vo
+!i122 8
+L0 32 1428
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1678820470.000000
+!s107 pbl1.vo|
+!s90 -work|work|pbl1.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vmain_vlg_vec_tst
+R1
+!i10b 1
+!s100 V]ofEYc:WdbUbbIg0V]eb1
+R2
+IMA2iag>2DkMmn>L0bn>Kb0
+R3
+R0
+w1678820467
+8SLA3.vwf.vt
+FSLA3.vwf.vt
+!i122 9
+L0 30 122
+R4
+r1
+!s85 0
+31
+R5
+!s107 SLA3.vwf.vt|
+!s90 -work|work|SLA3.vwf.vt|
+!i113 1
+R6
+R7

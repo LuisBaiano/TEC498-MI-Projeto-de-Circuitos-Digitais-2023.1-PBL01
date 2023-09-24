@@ -1,0 +1,36 @@
+module display7seg (CH7,CH6,CH5,CH4,CH3,valido,sA,sB,sC,sD,sE,sF,sG);
+
+	input CH7,CH6,CH5,CH4,CH3,valido;
+	output sA,sB,sC,sD,sE,sF,sG;
+	
+	wire nCH7,nCH6,nCH5,nCH4,nCH3,
+	n0,n1,n2,n3,n4,n5,n6,n7,n9;
+	
+	not(nCh7, Ch7);
+	not(nCh6, Ch6);
+	not(nCh5, Ch5);
+	not(nCh4, Ch4);
+	not(nCh3, Ch3);
+	
+   and (n0, nCH7,nCH6,nCH5,CH4,CH3); 00011    	0
+	
+   and (n1, nCH7,nCH6,CH5,nCH4,CH3); 00101		1
+	
+   and (n2, nCH7,nCH6,CH5,CH4,nCH3); 00110		2
+	
+   and (n3, nCH7,CH6,nCH5,nCH4,CH3); 01001		3
+	
+   and (n4, nCH7,CH6,nCH5,CH4,nCH3); 01010		4
+	
+   and (n5, nCH7,CH6,CH5,nCH4,nCH3); 01100		5
+	
+   and (n6, CH7,nCH6,nCH5,nCH4,CH3); 10001		6
+	
+   and (n7, CH7,nCH6,nCH5,CH4,nCH3); 10010		7
+	
+   and (n9, CH7,CH6,nCH5,nCH4,nCH3); 11000		9
+	
+	not(sB, valido);
+	not(sC, valido);
+	not(sD, valido);
+	

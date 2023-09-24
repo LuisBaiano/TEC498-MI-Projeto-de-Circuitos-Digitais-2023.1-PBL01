@@ -1,0 +1,14 @@
+module main (CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0, matriz_L, matriz_C, segA, segB, segC, segD, segE, segF, segG, dig1, dig2, dig3, dig4, ponto);
+
+	input CH7, CH6, CH5, CH4, CH3; //codigo binario 2 de 5
+	input CH2, CH1, CH0;     //chaves para escolha da linha da matriz
+	
+	output [6:0] matriz_L;    //linhas da matriz
+	output [4:0] matriz_C;	  //colunas da matriz
+	output dig1, dig2, dig3, ponto;   //digitos do display de 7seg e o ponto para deixar sempre desligados
+	output dig4;	//digito para ligar caso escolha exibir no display ou caso o código binario esteja errado
+	output segA, segB, segC, segD, segE, segF, segG; //segmentos do display de 7seg
+	
+	wire on_off; //recebe os bits do modulo verificador2de5 e do matriz_linhas, e liga ou não liga o display de 7seg
+	
+	
